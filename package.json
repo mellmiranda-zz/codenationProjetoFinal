@@ -10,7 +10,16 @@
     "last 2 version",
     "> 1%"
   ],
-  "scripts": {},
+  "scripts": {
+    "start": "webpack-dev-server -d --env development --open --config webpack.development.js -r @babel/register",
+    "build": "webpack -p --env production --config webpack.production.js -r @babel/register",
+    "format": "prettier-standard",
+    "lint:js": "standardx",
+    "lint:css": "stylelint ./src/**/*.css --fix --config stylelint.config.js",
+    "test": "jest --config jest.config.js --passWithNoTests",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --collectCoverage"
+  },
   "private": true,
   "contributors": [
     "Juliana Demarque <ju.dmrq@gmail.com> (https://demarque.com.br)"
