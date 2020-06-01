@@ -5,9 +5,14 @@ import 'core-js/es/map'
 import 'core-js/es/set'
 import 'raf/polyfill'
 
-import '@fashionista/css/index.css'
+import App from '@fashionista/app'
+import Store from '@fashionista/store'
 
-const rootComponent = React.createElement('h1', {}, 'Hello React App')
+const rootComponent = (
+  <Store>
+    <App />
+  </Store>
+)
 const rootElement = document.getElementById('app')
 
 render(rootComponent, rootElement)
