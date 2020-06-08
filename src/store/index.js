@@ -1,12 +1,11 @@
 import React from 'react'
 import { element } from 'prop-types'
-import { createStore } from 'redux'
+import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
-import { devToolsEnhancer } from 'redux-devtools-extension/logOnlyInProduction'
 
-import reducer from './reducers'
+import reducers from './reducers'
 
-const store = createStore(reducer, devToolsEnhancer())
+const store = configureStore({ reducer: reducers })
 
 const propTypes = {
   children: element.isRequired
