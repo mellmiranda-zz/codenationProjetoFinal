@@ -4,6 +4,7 @@ import '@fashionista/css/index.css'
 
 import Banner from 'components/Banner'
 import Button from 'components/Button'
+import Input from 'components/Input'
 
 export default function App () {
   return (
@@ -46,6 +47,23 @@ export default function App () {
         type='submit'
         classNameBtn='btn__icon'
         icon='fas fa-shopping-cart'
+      />
+
+      <Input
+        type='text'
+        placeholder='o que você procura?'
+        className='input__search'
+      />
+
+      <Input
+        classNameLabel='input__size-label'
+        label='P'
+
+        classNameInput='input__size'
+        type='radio'
+        id='P'
+        name='size'
+        value='P'
       />
     </>
   )
