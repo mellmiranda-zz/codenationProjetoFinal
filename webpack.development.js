@@ -30,6 +30,14 @@ export default function webpackDevelopmentConfig (env = {}) {
           loader: '@svgr/webpack'
         },
         {
+          test: /\.s[ac]ss$/i,
+          use: [
+            'style-loader',
+            'css-loader',
+            'sass-loader'
+          ]
+        },
+        {
           test: /\.css$/,
           use: [
             {

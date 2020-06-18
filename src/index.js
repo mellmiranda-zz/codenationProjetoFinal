@@ -5,7 +5,7 @@ import 'core-js/es/map'
 import 'core-js/es/set'
 import 'raf/polyfill'
 
-import App from '@fashionista/components/App'
+import App from '@fashionista/containers/App/App'
 import Store from '@fashionista/store'
 
 const rootComponent = (

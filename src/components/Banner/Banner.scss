@@ -1,0 +1,67 @@
+.banner {
+  &__hero {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+  }
+  &__product {
+    position: relative;
+    border-bottom: 2px solid #D88A95;
+    &--discount {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      background-color: #425C8D;
+      & span {
+        font-size: 12px;
+        font-weight: 600;
+        color: #FCFCFC;
+        &:last-child {
+          font-size: 10px;
+        }
+      }
+      &-bigger {
+        width: 60px;
+        height: 60px;
+        & span {
+          font-size: 16px;
+          font-weight: 600;
+          color: #FCFCFC;
+          &:last-child {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    &--card {
+      width: 100%;
+    }
+    &--search {
+      width: 30%;
+      border-bottom: 0;
+      &-discount {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: -70px;
+        width: 60px;
+        height: 30px;
+        background-color: #3C3C3C;
+        & span {
+          margin: 0 2px;
+          font-size: 10px;
+          font-weight: 500;
+          color: #FCFCFC;
+        }
+      }
+    }
+  }
+}
