@@ -1,12 +1,14 @@
 import React from 'react'
 
 import { CatalogProvider } from '@fashionista/components/contexts'
-import '@fashionista/css/index.css'
+import './App.scss'
+
+import Header from 'components/Header'
 
 export default function App () {
   return (
     <CatalogProvider>
-      <h1>Hello React App</h1>
+      <Header />
     </CatalogProvider>
   )
 }
