@@ -5,24 +5,24 @@ import './Search.scss'
 import Banner from 'components/Banner'
 import ProductInfo from 'components/ProductInfo'
 
-const Search = (props) => {
+const Search = ({product}) => {
   return (
     <>
       <li className='search__item'>
         <a href='/'>
           <Banner
             classNameBanner='banner__product banner__product--search'
-            src={props.image}
-            alt={props.name}
+            src={product.image}
+            alt={product.name}
             classNameDiscount='banner__product--search-discount'
-            percent={props.discount_percentage}
+            percent={product.discount_percentage}
           />
           <ProductInfo
             classNamePriceGroup='product-info__price-group--search'
-            productName={props.name}
+            productName={product.name}
             oldPriceText='De'
-            oldPriceValue={props.regular_price}
-            priceValue={props.actual_price}
+            oldPriceValue={product.regular_price}
+            priceValue={product.actual_price}
           />
         </a>
       </li>

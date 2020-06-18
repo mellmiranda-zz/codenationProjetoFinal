@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 
 import './Header.scss'
+
+import { CatalogContext } from '@fashionista/components/contexts'
 
 import Button from '../Button'
 import Input from '../Input'
@@ -8,6 +10,7 @@ import Input from '../Input'
 import SearchList from '../../containers/SearchList'
 
 const Header = () => {
+  const catalog = useContext(CatalogContext)
   const [openInputSearch, setOpenInputSearch] = useState(false)
   const [inputValue, setInputValue] = useState('')
   const [listSearch, setListSearch] = useState([])
@@ -34,6 +37,13 @@ const Header = () => {
     const inputTargetValue = e.target.value
     setInputValue(inputTargetValue)
   }
+
+  useEffect(() => {
+    const filterInput = catalog.products.filter((product) =>
+      product.name.toLowerCase().includes(inputValue.toLowerCase())
+    )
+    setListSearch(filterInput)
+  }, [inputValue, catalog])
 
   return (
     <header className='container header'>
@@ -72,7 +82,7 @@ const Header = () => {
           classNameBtn='btn__icon'
           icon='fas fa-shopping-cart'
         />
-        <SearchList />
+        <SearchList catalog={listSearch} />
       </nav>
     </header>
   )
