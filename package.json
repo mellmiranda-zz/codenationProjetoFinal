@@ -82,7 +82,7 @@
     "redux-devtools-extension": "^2.13.8",
     "standard-json": "^1.1.0",
     "standardx": "^5.0.0",
-    "stylelint": "^13.5.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.0.0",
